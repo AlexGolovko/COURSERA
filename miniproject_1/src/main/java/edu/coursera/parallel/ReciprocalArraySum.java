@@ -13,7 +13,6 @@ import java.util.logging.Logger;
 public final class ReciprocalArraySum {
 
 
-
     /**
      * Default constructor.
      */
@@ -156,7 +155,6 @@ public final class ReciprocalArraySum {
     }
 
 
-
     /**
      * TODO: Modify this method to compute the same reciprocal sum as
      * seqArraySum, but use two tasks running in parallel under the Java Fork
@@ -192,18 +190,10 @@ public final class ReciprocalArraySum {
         double sum = 0;
         ArrayList<ReciprocalArraySumTask> taskList = new ArrayList<ReciprocalArraySumTask>();
         for (int i = 0; i < numTasks; i++) {
-taskList.add(new ReciprocalArraySumTask(getChunkStartInclusive(i,numTasks,input.length ),getChunkEndExclusive(i,numTasks,input.length),input));
-        ForkJoinPool.commonPool().invoke(taskList.get(i));
-        sum+=taskList.get(i).value;
+            taskList.add(new ReciprocalArraySumTask(getChunkStartInclusive(i, numTasks, input.length), getChunkEndExclusive(i, numTasks, input.length), input));
+            ForkJoinPool.commonPool().invoke(taskList.get(i));
+            sum += taskList.get(i).value;
         }
-
-
-
-      /*  // Compute sum of reciprocals of array elements
-        for (int i = 0; i < input.length; i++) {
-            sum += 1 / input[i];
-        }
-*/
         return sum;
     }
 }

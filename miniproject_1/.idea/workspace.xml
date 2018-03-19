@@ -15,14 +15,14 @@
       <file leaf-file-name="ReciprocalArraySum.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/parallel/ReciprocalArraySum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="138" column="60" lean-forward="true" selection-start-line="138" selection-start-column="60" selection-end-line="138" selection-end-column="60" />
+            <state relative-caret-position="-71">
+              <caret line="137" column="60" lean-forward="false" selection-start-line="137" selection-start-column="60" selection-end-line="137" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#getChunkEndExclusive#0;class#ReciprocalArraySum#0" expanded="false" />
-                <element signature="e#4352#4353#0" expanded="true" />
-                <element signature="e#4388#4389#0" expanded="true" />
-                <element signature="e#6624#6648#0" expanded="true" />
+                <element signature="e#4351#4352#0" expanded="true" />
+                <element signature="e#4387#4388#0" expanded="true" />
+                <element signature="e#6622#6646#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,23 +31,11 @@
       <file leaf-file-name="ReciprocalArraySumTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/coursera/parallel/ReciprocalArraySumTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="119" column="34" lean-forward="false" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
+            <state relative-caret-position="-67">
+              <caret line="141" column="45" lean-forward="true" selection-start-line="141" selection-start-column="45" selection-end-line="141" selection-end-column="45" />
               <folding>
                 <element signature="method#createArray#0;class#ReciprocalArraySumTest#0" expanded="false" />
                 <element signature="method#seqArraySum#0;class#ReciprocalArraySumTest#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestRunner.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/3.8.2/junit-3.8.2.jar!/junit/textui/TestRunner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1408">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding>
-                <element signature="e#1690#1691#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +51,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/edu/coursera/parallel/ReciprocalArraySumTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/coursera/parallel/ReciprocalArraySum.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/coursera/parallel/ReciprocalArraySumTest.java" />
       </list>
     </option>
   </component>
@@ -169,28 +157,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="parallel" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="miniproject_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_1" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miniproject_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_1" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miniproject_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miniproject_1" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -204,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReciprocalArraySumTest.testParSimpleTwoMillion">
+  <component name="RunManager" selected="JUnit.ReciprocalArraySumTest.testParsimple">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -394,10 +370,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ReciprocalArraySumTest.testParSimpleTwoMillion" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ReciprocalArraySumTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ReciprocalArraySumTest.testParManyTaskTwoMillion" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ReciprocalArraySumTest.testParsimple" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ReciprocalArraySumTest.testParsimple" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ReciprocalArraySumTest.testParManyTaskTwoMillion" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ReciprocalArraySumTest.testParSimpleTwoMillion" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ReciprocalArraySumTest" />
       </list>
     </recent_temporary>
   </component>
@@ -418,35 +394,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 22m 37s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 08m 25s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 22m 53s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 08m 41s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 23m 45s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 09m 24s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 24m 00s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 10m 14s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 24m 13s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 17m 21s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 24m 36s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 17m 40s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 30m 17s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 18m 15s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 30m 37s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 18m 48s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 30m 50s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 19m 08s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReciprocalArraySumTest_testParSimpleTwoMillion - 2018.03.19 at 16h 31m 13s.xml">
-      <configuration name="ReciprocalArraySumTest.testParSimpleTwoMillion" configurationId="JUnit" />
+    <history-entry file="ReciprocalArraySumTest_testParsimple - 2018.03.19 at 17h 19m 40s.xml">
+      <configuration name="ReciprocalArraySumTest.testParsimple" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -470,9 +446,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23595506" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5161787" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -507,9 +483,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getChunkEndExclusive#0;class#ReciprocalArraySum#0" expanded="false" />
-            <element signature="e#4352#4353#0" expanded="true" />
-            <element signature="e#4388#4389#0" expanded="true" />
-            <element signature="e#6624#6648#0" expanded="true" />
+            <element signature="e#4351#4352#0" expanded="true" />
+            <element signature="e#4387#4388#0" expanded="true" />
+            <element signature="e#6622#6646#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -568,9 +544,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1408">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="e#1690#1691#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -592,22 +566,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/coursera/parallel/ReciprocalArraySum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="138" column="60" lean-forward="true" selection-start-line="138" selection-start-column="60" selection-end-line="138" selection-end-column="60" />
+        <state relative-caret-position="-71">
+          <caret line="137" column="60" lean-forward="false" selection-start-line="137" selection-start-column="60" selection-end-line="137" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getChunkEndExclusive#0;class#ReciprocalArraySum#0" expanded="false" />
-            <element signature="e#4352#4353#0" expanded="true" />
-            <element signature="e#4388#4389#0" expanded="true" />
-            <element signature="e#6624#6648#0" expanded="true" />
+            <element signature="e#4351#4352#0" expanded="true" />
+            <element signature="e#4387#4388#0" expanded="true" />
+            <element signature="e#6622#6646#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/coursera/parallel/ReciprocalArraySumTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="119" column="34" lean-forward="false" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
+        <state relative-caret-position="-67">
+          <caret line="141" column="45" lean-forward="true" selection-start-line="141" selection-start-column="45" selection-end-line="141" selection-end-column="45" />
           <folding>
             <element signature="method#createArray#0;class#ReciprocalArraySumTest#0" expanded="false" />
             <element signature="method#seqArraySum#0;class#ReciprocalArraySumTest#0" expanded="false" />
@@ -618,9 +592,80 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>miniproject_1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: classworlds:classworlds:1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
