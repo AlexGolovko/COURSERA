@@ -8,7 +8,7 @@ public class ReciprocalArraySumTest extends TestCase {
     // Number of times to repeat each test, for consistent timing results.
     final static private int REPEATS = 60;
 
-    private int lenghtOfArray = 200_000;
+
 
     private static int getNCores() {
         String ncoresStr = System.getenv("COURSERA_GRADER_NCORES");
@@ -143,7 +143,7 @@ public class ReciprocalArraySumTest extends TestCase {
         final int ncores = getNCores();
         final double minimalExpectedSpeedup = (double) ncores * 0.6;
         final double speedup = parTestHelper(2_000_000, true, ncores);
-        System.out.println(speedup);
+
         final String errMsg = String.format("It was expected that the many-task parallel implementation would run at " +
                 "least %fx faster, but it only achieved %fx speedup", minimalExpectedSpeedup, speedup);
         assertTrue(errMsg, speedup >= minimalExpectedSpeedup);

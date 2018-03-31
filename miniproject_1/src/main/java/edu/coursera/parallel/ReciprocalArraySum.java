@@ -1,11 +1,10 @@
 package edu.coursera.parallel;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
-import java.util.logging.Logger;
+
 
 /**
  * Class wrapping methods for implementing reciprocal array sum in parallel.
@@ -135,7 +134,7 @@ public final class ReciprocalArraySum {
         @Override
         protected void compute() {
             // TODO
-            if (endIndexExclusive - startIndexInclusive <= 2000) {
+            if (endIndexExclusive - startIndexInclusive <= 100_000) {
                 for (int i = startIndexInclusive; i < endIndexExclusive; i++) {
                     this.value += 1 / this.input[i];
                 }
@@ -191,7 +190,11 @@ public final class ReciprocalArraySum {
         ArrayList<ReciprocalArraySumTask> taskList = new ArrayList<ReciprocalArraySumTask>();
         for (int i = 0; i < numTasks; i++) {
             taskList.add(new ReciprocalArraySumTask(getChunkStartInclusive(i, numTasks, input.length), getChunkEndExclusive(i, numTasks, input.length), input));
-            ForkJoinPool.commonPool().invoke(taskList.get(i));
+            ForkJoinPool.commonPool().execute(taskList.get(i));
+        }
+
+        for (int i = 0; i < taskList.size(); i++) {
+            taskList.get(i).join();
             sum += taskList.get(i).value;
         }
         return sum;
