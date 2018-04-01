@@ -153,14 +153,9 @@ public final class StudentAnalytics {
     public int countNumberOfFailedStudentsOlderThan20ParallelStream(
             final Student[] studentArray) {
 
-final int acc=0;
         return (int) Arrays.stream(studentArray)
                 .parallel()
                 .filter(s -> !s.checkIsCurrent() && s.getAge() > 20 && s.getGrade() < 65)
                 .count();
-       Arrays.stream(studentArray)
-                .parallel()
-                .;
-
     }
 }
