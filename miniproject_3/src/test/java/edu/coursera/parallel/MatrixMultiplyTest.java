@@ -117,14 +117,14 @@ public class MatrixMultiplyTest extends TestCase {
                 "least %fx faster, but it only achieved %fx speedup", minimalExpectedSpeedup, speedup);
         assertTrue(errMsg, speedup >= minimalExpectedSpeedup);
     }
-   /* public void testPar128_x_128() {
+    public void testPar128_x_128() {
         final int ncores = getNCores();
         double speedup = parTestHelper(128);
         double minimalExpectedSpeedup = (double)ncores * 0.6;
         final String errMsg = String.format("It was expected that the parallel implementation would run at " +
                 "least %fx faster, but it only achieved %fx speedup", minimalExpectedSpeedup, speedup);
         assertTrue(errMsg, speedup >= minimalExpectedSpeedup);
-    }*/
+    }
 
     /**
      * Tests the performance of the parallel implementation on a 768x768 matrix.

@@ -57,7 +57,7 @@ public final class MatrixMultiply {
                         C[i][j] += A[i][k] * B[k][j];
                     }
                 });*/
-        forall2dChunked(0,N-1,0,N-1,
+        forall2dChunked(0,N-1,0,N-1,123456,
                 (i,j)->{
                     C[i][j] = 0.0;
                     for (int k = 0; k < N; k++) {
@@ -66,6 +66,9 @@ public final class MatrixMultiply {
                 }
 
         );
+
+int n=Runtime.getRuntime().availableProcessors();
+
 
 
        /* forseq2d(0, N - 1, 0, N - 1, (i, j) -> {
