@@ -17,13 +17,13 @@ public final class OneDimAveragingPhaser {
      * Sequential implementation of one-dimensional iterative averaging.
      *
      * @param iterations The number of iterations to run
-     * @param myNew A double array that starts as the output array
-     * @param myVal A double array that contains the initial input to the
-     *        iterative averaging problem
-     * @param n The size of this problem
+     * @param myNew      A double array that starts as the output array
+     * @param myVal      A double array that contains the initial input to the
+     *                   iterative averaging problem
+     * @param n          The size of this problem
      */
     public static void runSequential(final int iterations, final double[] myNew,
-            final double[] myVal, final int n) {
+                                     final double[] myVal, final int n) {
         double[] next = myNew;
         double[] curr = myVal;
 
@@ -42,15 +42,15 @@ public final class OneDimAveragingPhaser {
      * that uses phasers as a simple barrier (arriveAndAwaitAdvance).
      *
      * @param iterations The number of iterations to run
-     * @param myNew A double array that starts as the output array
-     * @param myVal A double array that contains the initial input to the
-     *        iterative averaging problem
-     * @param n The size of this problem
-     * @param tasks The number of threads/tasks to use to compute the solution
+     * @param myNew      A double array that starts as the output array
+     * @param myVal      A double array that contains the initial input to the
+     *                   iterative averaging problem
+     * @param n          The size of this problem
+     * @param tasks      The number of threads/tasks to use to compute the solution
      */
     public static void runParallelBarrier(final int iterations,
-            final double[] myNew, final double[] myVal, final int n,
-            final int tasks) {
+                                          final double[] myNew, final double[] myVal, final int n,
+                                          final int tasks) {
         Phaser ph = new Phaser(0);
         ph.bulkRegister(tasks);
 
@@ -69,7 +69,7 @@ public final class OneDimAveragingPhaser {
 
                     for (int j = left; j <= right; j++) {
                         threadPrivateMyNew[j] = (threadPrivateMyVal[j - 1]
-                            + threadPrivateMyVal[j + 1]) / 2.0;
+                                + threadPrivateMyVal[j + 1]) / 2.0;
                     }
                     ph.arriveAndAwaitAdvance();
 
@@ -94,27 +94,25 @@ public final class OneDimAveragingPhaser {
      * A parallel implementation of one-dimensional iterative averaging that
      * uses the Phaser.arrive and Phaser.awaitAdvance APIs to overlap
      * computation with barrier completion.
-     *
+     * <p>
      * TODO Complete this method based on the provided runSequential and
      * runParallelBarrier methods.
      *
      * @param iterations The number of iterations to run
-     * @param myNew A double array that starts as the output array
-     * @param myVal A double array that contains the initial input to the
-     *              iterative averaging problem
-     * @param n The size of this problem
-     * @param tasks The number of threads/tasks to use to compute the solution
+     * @param myNew      A double array that starts as the output array
+     * @param myVal      A double array that contains the initial input to the
+     *                   iterative averaging problem
+     * @param n          The size of this problem
+     * @param tasks      The number of threads/tasks to use to compute the solution
      */
     public static void runParallelFuzzyBarrier(final int iterations,
-            final double[] myNew, final double[] myVal, final int n,
-            final int tasks) {
+                                               final double[] myNew, final double[] myVal, final int n, final int tasks) {
+        Phaser ph = new Phaser(0);
+        ph.bulkRegister(tasks);
 
-        Phaser[] phs = new Phaser[tasks];
-        for(int i=0;i<phs.length;i++){
-            phs[i] = new Phaser(1);
-        }
 
         Thread[] threads = new Thread[tasks];
+
 
         for (int ii = 0; ii < tasks; ii++) {
             final int i = ii;
@@ -124,23 +122,17 @@ public final class OneDimAveragingPhaser {
                 double[] threadPrivateMyNew = myNew;
 
                 for (int iter = 0; iter < iterations; iter++) {
-                    final int left = i * (n / tasks) + 1;
-                    final int right = (i + 1) * (n / tasks);
-
-                    for (int j = left; j <= right; j++) {
+                    int left = i * (n / tasks) + 1;
+                    threadPrivateMyNew[left] = (threadPrivateMyVal[left - 1] + threadPrivateMyVal[left + 1]) / 2.0;
+                    int right = (i + 1) * (n / tasks);
+                    threadPrivateMyNew[right] = (threadPrivateMyVal[right - 1]
+                            + threadPrivateMyVal[right + 1]) / 2.0;
+                    int currentPhase = ph.arrive();
+                    for (int j = left; j <= right; j++)
                         threadPrivateMyNew[j] = (threadPrivateMyVal[j - 1]
                                 + threadPrivateMyVal[j + 1]) / 2.0;
-                    }
-//                    System.out.println("Arriving task: "+ i);
-                    phs[i].arrive();
-                    if(i-1>=0){
-//                        System.out.println("Arrived task "+ i +" Waiting for "+ (i-1));
-                        phs[i-1].awaitAdvance(1);
-                    }
-                    if(i+1<tasks){
-//                        System.out.println("Arrived task "+ i +" Waiting for "+ (i+1));
-                        phs[i+1].awaitAdvance(1);
-                    }
+                    ph.awaitAdvance(currentPhase);
+
 
                     double[] temp = threadPrivateMyNew;
                     threadPrivateMyNew = threadPrivateMyVal;
