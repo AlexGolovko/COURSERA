@@ -43,7 +43,7 @@ class ReachabilityTest {
     @ParameterizedTest
     @MethodSource("prepareTestReachPath")
     void testReachPath(StaticScanner scanner, int result) {
-        assertEquals(new Reach(scanner).isReachable(), result);
+        assertEquals(result, new Reach(scanner).isReachable());
     }
 
     static Stream<Arguments> prepareTestReachPath() {
