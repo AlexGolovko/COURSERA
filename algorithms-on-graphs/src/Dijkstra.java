@@ -1,9 +1,6 @@
 import java.util.*;
 
 public class Dijkstra {
-    private static int distance(ArrayList<Integer>[] adj, ArrayList<Integer>[] cost, int s, int t) {
-        return -1;
-    }
 
     public static void main(String[] args) {
         System.out.println(new DijkstraDistance().evaluate(new DijkstraGraph().scan()));
@@ -22,13 +19,6 @@ public class Dijkstra {
             while (!queue.isEmpty()) {
                 Node node = queue.poll();
                 node.isVisited = true;
-//                node.reachableEdge.parallelStream()
-//                        .filter(edge -> edge.node.isVisited)
-//                        .peek(edge -> queue.add(edge.node))
-//                        .filter(edge -> node.distance + edge.cost < edge.node.distance)
-//                        .forEach(edge -> {
-//                    edge.node.distance = node.distance + edge.cost;
-//                });
                 for (Edge edge : node.reachableEdge) {
                     if (!edge.node.isVisited) {
                         distance = node.distance + edge.cost;
