@@ -46,7 +46,7 @@ class TrieMatchingExtendedTest {
         final PrintStream out = System.out;
         System.setOut(new PrintStream(outputStream));
         new TrieMatchingExtended().run();
-        assertEquals(result/*.replace(" ","\n")*/, outputStream.toString().replace("\r\n", " "));
+        assertEquals(result, outputStream.toString().replace("\r\n", " "));
         System.setOut(out);
         System.out.println(System.currentTimeMillis() - start);
     }

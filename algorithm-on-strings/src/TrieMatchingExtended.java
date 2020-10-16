@@ -36,9 +36,6 @@ public class TrieMatchingExtended implements Runnable {
         final int length = text.length();
         for (int idx = 0; idx < length; idx++) {
             computeSuffixTree(text, idx, idx, root, result);
-//            if (computeSuffixTree(text, idx, root, result)) {
-//                result.add(String.valueOf(idx));
-//            }
         }
         return result;
     }
@@ -47,20 +44,14 @@ public class TrieMatchingExtended implements Runnable {
         if (node.leaf.isEmpty()) {
             result.add(textIdx);
             return;
-//            return true;
         }
         if (node.patternFinish) {
             result.add(textIdx);
         }
         if (currentIdx < text.length()) {
-//            if (node.value != text.charAt(currentIdx + 1)) {
-//                return;
-//            }
             final Optional<Node> first = node.findFirst(text.charAt(currentIdx));
-            //                return computeSuffixTree(text, idx + 1, first.get(), result);
             first.ifPresent(value -> computeSuffixTree(text, textIdx, currentIdx + 1, value, result));
         }
-//        return false;
     }
 
     static public void main(String[] args) throws IOException {
@@ -91,8 +82,7 @@ public class TrieMatchingExtended implements Runnable {
     }
 
     public Node buildTree(ArrayList<String> patterns) {
-//        final AtomicInteger atomicInteger = new AtomicInteger(0);
-        final Node root = new Node((char) /*atomicInteger.getAndAdd(1)*/0);
+        final Node root = new Node((char) 0);
         patterns.sort(Comparator.comparingInt(String::length).reversed());
         patterns.forEach(pattern -> {
             Node currentNode = root;
@@ -106,7 +96,7 @@ public class TrieMatchingExtended implements Runnable {
                         currentNode.patternFinish = true;
                     }
                 } else {
-                    final Node newNode = new Node(/*atomicInteger.getAndAdd(1),*/ c);
+                    final Node newNode = new Node(c);
                     currentNode.addLeaf(newNode);
                     currentNode = newNode;
                 }
@@ -125,11 +115,6 @@ public class TrieMatchingExtended implements Runnable {
             value = c;
         }
 
-//        public Node(int id, char c) {
-//            this.id = id;
-//            this.value = c;
-//        }
-
         public List<Node> getLeaf() {
             return leaf;
         }
@@ -137,22 +122,6 @@ public class TrieMatchingExtended implements Runnable {
         public void addLeaf(Node leaf) {
             this.leaf.add(leaf);
         }
-
-//        public int getId() {
-//            return id;
-//        }
-//
-//        public void setId(int id) {
-//            this.id = id;
-//        }
-//
-//        public Character getValue() {
-//            return value;
-//        }
-//
-//        public void setValue(Character value) {
-//            this.value = value;
-//        }
 
         public Optional<Node> findFirst(char c) {
             for (Node node : leaf) {
